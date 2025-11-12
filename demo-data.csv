@@ -1,0 +1,11 @@
+Estilo_Principal,Sub-estilo,Artista,Obra,Spotify_URI,Mini_resena,Color,Emoji,BPM,Duración,Época,País
+clásica,barroco,Bach,Brandenburg Concerto No. 3 - I,spotify:track:1qY5S8jVj2YvGJ3eA7K9L0,Festejo alegre,#EADAB8,🎹,160,5:45,1721,Alemania
+clásica,barroco,Handel,Water Music - Hornpipe,spotify:track:2w9t2sZ3f4YhK8jL1M6N5P,Baile en barco,#D4B483,🎺,120,2:55,1717,Reino Unido
+clásica,clasicismo,Mozart,Eine kleine Nachtmusik - Allegro,spotify:track:3kX4m5n7q8r9s0t1u2v3w4,Música de luna,#F3D6E4,🌙,140,5:30,1787,Austria
+clásica,clasicismo,Beethoven,Symphony No. 6 - Pastorale I,spotify:track:4lM5n6o7p8q9r0s1t2u3v4,Campo y río,#C8E6C9,🌳,90,10:25,1808,Alemania
+jazz,swing,Duke Ellington,Take Five,spotify:track:5mN6o7p8q9r0s1t2u3v4w5,Ritmo inolvidable,#FFE082,🎷,180,5:24,1959,Estados Unidos
+jazz,bebop,Charlie Parker,Ornithology,spotify:track:6n7o8p9q0r1s2t3u4v5w6x7,Saxo volador,#FFCCBC,🐦,200,2:55,1946,Estados Unidos
+rock,classic,The Beatles,Hey Jude,spotify:track:7o8p9q0r1s2t3u4v5w6x7y8,Canción eterna,#E1BEE7,🎸,140,7:11,1968,Reino Unido
+rock,alternative,Nirvana,Smells Like Teen Spirit,spotify:track:8p9q0r1s2t3u4v5w6x7y8z9,Grunge anthem,#B39DDB,🔥,120,5:01,1991,Estados Unidos
+pop,80s,Michael Jackson,Billie Jean,spotify:track:9q0r1s2t3u4v5w6x7y8z0a1,Rey del pop,#FFF59D,🕺,117,4:54,1983,Estados Unidos
+pop,modern,Taylor Swift,Shake It Off,spotify:track:0r1s2t3u4v5w6x7y8z0a1b2,Baila sin parar,#FFAB91,💃,160,3:39,2014,Estados Unidos

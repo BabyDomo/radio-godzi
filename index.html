@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre Música</title>
+    <meta name="description" content="Descubre nueva música de forma divertida">
+    <meta name="theme-color" content="#FF6B6B">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="/icon-192.png">
+    <link rel="apple-touch-icon" href="/icon-192.png">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Pantalla de carga inicial -->
+        <div id="loading-screen" class="loading-screen">
+            <div class="loading-spinner">
+                <div class="music-note">🎵</div>
+                <div class="loading-text">Cargando música...</div>
+            </div>
+        </div>
+
+        <!-- Pantalla principal -->
+        <div id="main-screen" class="screen hidden">
+            <header class="app-header">
+                <h1 class="app-title">🎵 Descubre Música</h1>
+                <button id="spotify-login" class="spotify-btn hidden">
+                    <span class="spotify-icon">🎶</span>
+                    <span>Conectar Spotify</span>
+                </button>
+            </header>
+            
+            <main class="main-content">
+                <div id="styles-grid" class="styles-grid">
+                    <!-- Las tarjetas de estilos se generarán dinámicamente -->
+                </div>
+            </main>
+        </div>
+
+        <!-- Pantalla de sub-estilos -->
+        <div id="substyles-screen" class="screen hidden">
+            <header class="screen-header">
+                <button id="back-to-styles" class="back-btn">← Volver</button>
+                <h2 id="substyles-title" class="screen-title"></h2>
+            </header>
+            
+            <main class="substyles-carousel">
+                <div id="substyles-container" class="substyles-container">
+                    <!-- Los sub-estilos se generarán dinámicamente -->
+                </div>
+            </main>
+        </div>
+
+        <!-- Pantalla de canciones -->
+        <div id="tracks-screen" class="screen hidden">
+            <header class="screen-header">
+                <button id="back-to-substyles" class="back-btn">← Volver</button>
+                <h2 id="tracks-title" class="screen-title"></h2>
+            </header>
+            
+            <main class="tracks-list">
+                <div id="tracks-container" class="tracks-container">
+                    <!-- Las canciones se generarán dinámicamente -->
+                </div>
+            </main>
+        </div>
+
+        <!-- Reproductor de audio -->
+        <div id="audio-player" class="audio-player hidden">
+            <audio id="preview-player" preload="metadata"></audio>
+            <div class="player-controls">
+                <button id="play-pause" class="play-btn">▶️</button>
+                <span class="track-info">
+                    <span id="current-track-name" class="track-name"></span>
+                    <span class="preview-label">Vista previa</span>
+                </span>
+                <button id="close-player" class="close-btn">✕</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+</body>
+</html>

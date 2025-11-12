@@ -1,0 +1,533 @@
+/* Variables CSS para colores y temas */
+:root {
+  --primary-color: #FF6B6B;
+  --secondary-color: #4ECDC4;
+  --accent-color: #45B7D1;
+  --background-color: #F7F9FC;
+  --surface-color: #FFFFFF;
+  --text-primary: #2C3E50;
+  --text-secondary: #7F8C8D;
+  --border-color: #E1E8ED;
+  --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --border-radius: 16px;
+  --border-radius-small: 8px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Utilidades */
+.hidden {
+  display: none !important;
+}
+
+.screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Pantalla de carga */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loading-spinner {
+  text-align: center;
+  color: white;
+}
+
+.music-note {
+  font-size: 4rem;
+  animation: bounce 1s infinite;
+  margin-bottom: 1rem;
+}
+
+.loading-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Header principal */
+.app-header {
+  background: var(--surface-color);
+  padding: 1rem;
+  box-shadow: var(--shadow-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.app-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.spotify-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-small);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition);
+}
+
+.spotify-btn:hover {
+  background: #E55555;
+  transform: translateY(-2px);
+}
+
+.spotify-btn.hidden {
+  display: none;
+}
+
+/* Grid de estilos musicales */
+.main-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+.styles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.style-card {
+  background: var(--surface-color);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-light);
+  border: 3px solid transparent;
+}
+
+.style-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--primary-color);
+}
+
+.style-emoji {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.style-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.style-count {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Headers de pantalla */
+.screen-header {
+  background: var(--surface-color);
+  padding: 1rem;
+  box-shadow: var(--shadow-light);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.back-btn {
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-small);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.back-btn:hover {
+  background: #45B7A8;
+  transform: translateY(-2px);
+}
+
+.screen-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Carrusel de sub-estilos */
+.substyles-carousel {
+  flex: 1;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.substyles-container {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+  min-height: 200px;
+}
+
+.substyle-card {
+  background: var(--surface-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  min-width: 250px;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-light);
+  border: 3px solid transparent;
+  text-align: center;
+}
+
+.substyle-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--accent-color);
+}
+
+.substyle-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.substyle-info {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Lista de canciones */
+.tracks-list {
+  flex: 1;
+  padding: 1rem;
+}
+
+.tracks-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.track-card {
+  background: var(--surface-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.track-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--secondary-color);
+}
+
+.track-header {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.track-cover {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: var(--border-radius-small);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.track-info-main {
+  flex: 1;
+}
+
+.track-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.track-artist {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.track-review {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.track-details {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.track-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.play-btn, .spotify-add-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--border-radius-small);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.play-btn:hover, .spotify-add-btn:hover {
+  background: #E55555;
+  transform: translateY(-2px);
+}
+
+.spotify-add-btn {
+  background: var(--accent-color);
+}
+
+.spotify-add-btn:hover {
+  background: #3A9BB8;
+}
+
+.spotify-add-btn:disabled {
+  background: var(--text-secondary);
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Reproductor de audio */
+.audio-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--surface-color);
+  box-shadow: var(--shadow-medium);
+  border-top: 1px solid var(--border-color);
+  padding: 1rem;
+  z-index: 200;
+  transform: translateY(100%);
+  transition: var(--transition);
+}
+
+.audio-player.active {
+  transform: translateY(0);
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.play-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.track-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.track-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.preview-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.close-btn:hover {
+  background: var(--border-color);
+  color: var(--text-primary);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .styles-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .style-card {
+    padding: 1.5rem;
+  }
+  
+  .style-emoji {
+    font-size: 3rem;
+  }
+  
+  .track-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .track-cover {
+    align-self: center;
+  }
+  
+  .track-actions {
+    justify-content: center;
+  }
+  
+  .app-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .screen-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content,
+  .substyles-carousel,
+  .tracks-list {
+    padding: 0.5rem;
+  }
+  
+  .style-card,
+  .track-card {
+    padding: 1rem;
+  }
+  
+  .substyle-card {
+    min-width: 200px;
+    padding: 1rem;
+  }
+}
+
+/* Animaciones de transición entre pantallas */
+.screen {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: var(--transition);
+}
+
+.screen.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Personalización de scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}

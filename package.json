@@ -1,0 +1,19 @@
+{
+  "name": "music-discovery-pwa",
+  "version": "1.0.0",
+  "description": "Kid-friendly music discovery PWA",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "gh-pages": "^6.0.0"
+  },
+  "keywords": ["pwa", "music", "discovery", "kids", "spotify"],
+  "author": "",
+  "license": "MIT"
+}
