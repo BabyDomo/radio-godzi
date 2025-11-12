@@ -1,7 +1,7 @@
 // Configuración y constantes
 const CONFIG = {
   CSV_URL: 'https://docs.google.com/spreadsheets/d/1sA83GLCHJcecgefsMhKMUPzIqE5WRGtroAO5RwmfhAE/export?format=csv',
-  SPOTIFY_CLIENT_ID: 'tu-client-id-aqui', // Cambiar por tu cliente ID de Spotify
+  SPOTIFY_CLIENT_ID: 'c515421196d84ce6983205c81c46fc13', // Cambiar por tu cliente ID de Spotify
   SPOTIFY_REDIRECT_URI: window.location.origin + window.location.pathname,
   CACHE_NAME: 'music-discovery-cache-v1',
   CACHE_MAX_TRACKS: 50
